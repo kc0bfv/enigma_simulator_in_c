@@ -9,11 +9,14 @@
 #include "utils.h"
 
 void print_usage(char * prog_name) {
-    printf("Usage: %s key rotor_order swaps enc/dec_text\n", prog_name);
-    printf("\n\tkey          - 3 characters\n");
-    printf("\n\trotor_order  - 3 characters\n");
-    printf("\n\tswaps        - TODO EXPLAIN\n");
-    printf("\n\tenc/dec_text - the text to encode or decode\n");
+    printf("Usage: %s key rotor_order swaps enc/dec_text\n\n", prog_name);
+    printf("\tkey          - 3 characters, the initial settings on the "
+           "rotors\n");
+    printf("\trotor_order  - 3 digits, the rotors to use.  1, 2, 3,"
+         "\n\t               and 5 implemented.\n");
+    printf("\tswaps        - An even number of characters, where each"
+         "\n\t               pair is swapped on the plugboard.\n");
+    printf("\tenc/dec_text - The text to encode or decode.\n");
 }
 
 int run_alg(char *out_text, char *key, char *rotors, char *swaps, char *text) {
